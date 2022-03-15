@@ -1,19 +1,10 @@
 <?php
-
-$request = $_SERVER['REQUEST_URI'];
-// die($request);
-
-switch ($request) {
-    case '/' :
-        require __DIR__ . '/public/index.php';
-        break;
-    case '' :
-        require __DIR__ . '/views/index.php';
-        break;
-	case 'posts':
-		require __DIR__ . '/views/index.php';
-		break;
-}
+	
+	$link = mysqli_connect('127.0.0.1', 'root', 'root', 'db', '8080');
+		if (mysqli_connect_errno()) {
+			die('Error' . mysqli_connect_errno() . '-' . mysqli_connect_error());
+		}
+	die('connected');
 
 require_once('app/bootstrap.php');
 

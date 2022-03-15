@@ -10,4 +10,5 @@ AutoloadClass::autoload();
 require('app/migration.php');
 
 SeederClass::up();
-require('app/routerConfig.php');
+
+require('app/route.php');
