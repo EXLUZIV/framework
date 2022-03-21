@@ -1,7 +1,7 @@
 <?php
 
 return $BDConfig = array(
-	'server' => 'localhost',
+	'server' => 'mariadb',
 	'user' => 'php',
 	'bd' => 'php',
 	'pass' => 'php'
