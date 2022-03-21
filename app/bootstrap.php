@@ -9,6 +9,6 @@ AutoloadClass::autoload();
 
 require('app/migration.php');
 
-SeederClass::up();
+// SeederClass::up();
 
 require('app/route.php');

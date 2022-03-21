@@ -3,6 +3,6 @@
 return $BDConfig = array(
 	'server' => 'mariadb',
 	'user' => 'php',
-	'bd' => 'php',
+	'bd' => 'db',
 	'pass' => 'php'
 );
