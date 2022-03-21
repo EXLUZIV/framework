@@ -1,6 +1,6 @@
 <?php
 
-	$link = mysqli_connect('127.0.0.1', 'root', 'root', 'db', '8080');
+	$link = mysqli_connect('mariadb', 'php', 'php', 'php');
 		if (mysqli_connect_errno()) {
 			die('Error' . mysqli_connect_errno() . '-' . mysqli_connect_error());
 		}
