@@ -1,7 +1,7 @@
 let id = null;
 
 async function getPosts() {
-	let res = await fetch('http://localhost/oop_connector/index.php/posts');
+	let res = await fetch('http://php.localhost:8000/app/api.php/posts');
 	let posts = await res.json();
 
 	document.querySelector('.all-box').innerHTML = '';
@@ -35,7 +35,7 @@ async function addPost() {
 	formData.append('post_title', postTitle);
 	formData.append('post_text', content);
 
-	const res = await fetch('http://localhost/oop_connector/index.php/posts', {
+	const res = await fetch('http://php.localhost:8000/app/api.php/posts', {
 		method: 'POST',
 		body: formData
 	});
@@ -49,7 +49,7 @@ async function addPost() {
 }
 
 async function removePost(id) {
-	const res = await fetch(`http://localhost/oop_connector/index.php/posts/${id}`, {
+	const res = await fetch(`http://php.localhost:8000/app/api.php/posts/${id}`, {
 		method: "DELETE"
 	});
 
@@ -80,7 +80,7 @@ async function updatePost() {
 		post_text: post_text
 	};
 
-	const res = await fetch(`http://localhost/oop_connector/index.php/posts/${id}`, {
+	const res = await fetch(`http://php.localhost:8000/app/api.php/posts/${id}`, {
 		method: "PATCH",
 		body: JSON.stringify(data)
 	})

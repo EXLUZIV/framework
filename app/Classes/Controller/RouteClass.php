@@ -21,6 +21,7 @@ class RouteClass
 		
 
 		switch ($method) {
+			
 			case "GET":
 
 				$get = new GetClass($connectBD);
@@ -36,10 +37,12 @@ class RouteClass
 						$get->getById($id);
 	
 						break;
+					
 					} else {
 						$get->getAll();
 	
 						break;
+					
 					}	
 				}
 			
@@ -87,6 +90,7 @@ class RouteClass
 						break;
 					}
 					break;
+		
 		}
 	}
 }
