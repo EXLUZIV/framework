@@ -11,4 +11,4 @@ require('app/migration.php');
 
 SeederClass::up();
 
-// require('app/route.php');
+require('app/route.php');
