@@ -16,13 +16,13 @@ class RouteClass implements RouteInterface
 	public function route(string $url): void
 	{
 		$path = $this->pages[$url];
-		$file_dir = 'public/'.$path;
+		
 		if($path === ''){
 			die('This page does not exist');
 		}
 
-		if(file_exists($file_dir)){
-			require $file_dir;
+		if(file_exists($path)){
+			require $path;
 		}else{
 			die('This page does not exist');
 		}

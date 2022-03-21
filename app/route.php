@@ -2,10 +2,15 @@
 
 use App\Classes\RouteClass;
 
-$url = key($_GET);
+$url = $_SERVER['REQUEST_URI'];
+// die($url);
 
 $route = new RouteClass;
-$route->addRoute("/", "index.php");
-$route->addRoute("", "index.php");
 
-$route->route("/".$url);
+$route->addRoute("/", "public/index.php");
+$route->addRoute("/test", "public/index.php");
+$route->addRoute("", "public/index.php");
+$route->addRoute("/posts", "app/api.php");
+$route->addRoute("/users", "app/api.php");
+
+$route->route($url);
