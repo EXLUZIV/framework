@@ -4,5 +4,6 @@ return $BDConfig = array(
 	'server' => 'mariadb',
 	'user' => 'php',
 	'bd' => 'db',
-	'pass' => 'php'
+	'pass' => 'php',
+	'port' => '3306',
 );

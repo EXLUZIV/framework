@@ -1,11 +1,11 @@
 <?php
 
-use App\Classes\RouteClass;
+use App\Classes\RouteConfigClass;
 
 $url = $_SERVER['REQUEST_URI'];
 // die($url);
 
-$route = new RouteClass;
+$route = new RouteConfigClass;
 
 $route->addRoute("/", "public/index.php");
 $route->addRoute("/test", "public/index.php");

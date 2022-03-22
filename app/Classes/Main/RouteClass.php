@@ -2,9 +2,7 @@
 
 namespace App\Classes;
 
-use App\Interface\RouteInterface;
-
-class RouteClass implements RouteInterface
+class RouteConfigClass
 {
 	private $pages = [];
 
@@ -16,7 +14,7 @@ class RouteClass implements RouteInterface
 	public function route(string $url): void
 	{
 		$path = $this->pages[$url];
-		
+
 		if($path === ''){
 			die('This page does not exist');
 		}
